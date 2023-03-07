@@ -1,0 +1,74 @@
+body{
+  background-color: #6BBCBE;
+  height: 100vh;
+}
+.dott {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: white;
+  margin: 150px 20px;
+}
+.rect {
+  width: 20px;
+  height: 60px;
+  background-color: white;
+  margin: 0px 5px;
+}
+#one,
+#two {
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
+@keyframes first_last {
+    from {
+      transform: rotate(0deg) translateX(0px) rotate(0deg); 
+    }
+    to {
+      transform: rotate(180deg) translateX(-120px) rotate(-180deg);
+    }
+}
+.dott:first-child{
+  animation: first_last 1s ease-in-out infinite;
+}
+@keyframes last_first {
+    from {
+      transform: rotate(0deg) translateX(0px) rotate(0deg); 
+    }
+    to {
+      transform: rotate(180deg) translateX(120px) rotate(-180deg);
+    }
+}
+.dott:last-child{
+  animation: last_first 1s ease-in-out infinite;
+}
+@keyframes long {
+  0% {
+    height: 80px;
+  }
+  50% {
+    height: 130px;
+  }
+  100%{
+    height: 80px;
+  }
+}
+.rect{
+  animation: long 1s  ease-in-out infinite;
+}
+.rect:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.rect:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.rect:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.rect:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.rect:nth-child(5) {
+  animation-delay: 0.5s;
+}
